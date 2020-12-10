@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "./",
             "outputPath": "dist/greenmeadowsward",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -61,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "greenmeadowsward:build"
+            "browserTarget": "greenmeadowsward:build",
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
@@ -115,6 +117,12 @@
             "production": {
               "devServerTarget": "greenmeadowsward:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "./"
           }
         }
       }
