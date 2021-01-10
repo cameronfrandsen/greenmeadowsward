@@ -1,7 +1,10 @@
-.square {
+.group {
   height: 310px;
   width: 310px;
   background-color: rgb(255, 255, 255, .6);
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 .addPadding {
@@ -27,4 +30,9 @@
 
 .myInfo {
   text-align: center;
+}
+
+.row {
+  text-align: center;
+  vertical-align: middle;
 }
